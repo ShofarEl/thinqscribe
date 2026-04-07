@@ -1,9 +1,9 @@
+/* Import Berkshire Swash font */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Import Berkshire Swash font */
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 @layer components {
   .btn-primary {
