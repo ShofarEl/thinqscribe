@@ -189,7 +189,7 @@ const LandingPage = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -197,15 +197,15 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center group cursor-pointer p-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
+                className="text-center group cursor-pointer p-4 sm:p-6 rounded-xl hover:bg-gray-50 transition-all duration-300"
               >
-                <div className="mb-6 md:mb-8 inline-flex items-center justify-center">
+                <div className="mb-4 sm:mb-6 md:mb-8 inline-flex items-center justify-center">
                   <div className={`${service.color} transition-transform group-hover:scale-110 duration-300`}>
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3">{service.name}</h3>
-                <p className="text-gray-500 text-sm">{service.count}</p>
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1 sm:mb-2 md:mb-3 leading-tight">{service.name}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm">{service.count}</p>
               </motion.div>
             ))}
           </div>

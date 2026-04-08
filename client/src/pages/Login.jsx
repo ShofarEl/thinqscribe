@@ -88,14 +88,14 @@ const Login = () => {
         <div
           style={{
             flex: window.innerWidth <= 768 ? '1' : '0 0 45%',
-            padding: window.innerWidth <= 768 ? '32px 24px' : '48px 44px',
+            padding: window.innerWidth <= 640 ? '40px 20px' : window.innerWidth <= 768 ? '48px 32px' : '48px 44px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             background: 'linear-gradient(160deg, #f0f4f8 0%, #e8f0f7 100%)',
             position: 'relative',
             zIndex: 1,
-            minHeight: window.innerWidth <= 768 ? '100vh' : 'auto',
+            minHeight: window.innerWidth <= 768 ? 'auto' : 'auto',
           }}
         >
           {/* Logo */}
