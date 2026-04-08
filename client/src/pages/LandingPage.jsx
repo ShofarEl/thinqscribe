@@ -335,13 +335,13 @@ const LandingPage = () => {
             <div>
               <h4 className="text-white font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm">
-                <li>support@thinqscribe.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>officialthinqscribe@gmail.com</li>
+                <li>+234 903 297 9532</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2024 Thinqscribe. All rights reserved.</p>
+            <p>&copy; 2026 Thinqscribe. All rights reserved.</p>
           </div>
         </div>
       </footer>
