@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import Writers from './pages/Writers';
+import Scribes from './pages/Scribes';
 import About from './pages/About';
 import Profile from './pages/Profile';
 
@@ -66,6 +67,7 @@ function AppRoutes() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       
       <Route path="/writers" element={<Writers />} />
+      <Route path="/scribes" element={<Scribes />} />
       
       <Route 
         path="/profile" 
