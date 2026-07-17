@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { initializeAllPixels, trackUserActions } from './config/tracking';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -82,6 +84,14 @@ function AppRoutes() {
 }
 
 function App() {
+  useEffect(() => {
+    // Initialize all tracking pixels on app load
+    initializeAllPixels();
+
+    // Track page view for landing page
+    trackUserActions.landingPageView();
+  }, []);
+
   return (
     <BrowserRouter>
       <AuthProvider>
