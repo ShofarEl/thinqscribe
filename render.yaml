@@ -5,10 +5,32 @@ services:
     rootDir: server
     buildCommand: npm install
     startCommand: npm start
+    plan: starter
+    
+    # Environment variables - Configure these in Render dashboard
     envVars:
       - key: NODE_ENV
         value: production
+      
       - key: MONGODB_URI
-        sync: false
+        sync: false  # Must be set in Render dashboard
+      
       - key: JWT_SECRET
-        sync: false
+        sync: false  # Must be set in Render dashboard
+      
+      - key: ALLOWED_ORIGINS
+        value: https://theskribe.com,https://www.theskribe.com,https://api.theskribe.com,https://thinqscribe.com,https://www.thinqscribe.com,https://thinqscribe-4mly.vercel.app
+      
+      - key: PORT
+        value: 5000
+    
+    # Auto-deploy on push to main
+    autoDeploy: true
+    
+    # Health check endpoint
+    healthCheckPath: /api/health
+    
+    # Maximum instances for scaling
+    scaling:
+      minInstances: 1
+      maxInstances: 3
