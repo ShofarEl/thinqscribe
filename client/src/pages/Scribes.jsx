@@ -8,8 +8,8 @@ const Scribes = () => {
       id: 1,
       name: 'THINQSCRIBE',
       field: 'Literature & English',
-      specialties: ['Essay Writing', 'Literary Analysis', 'Creative Writing', 'Research Papers', 'Poetry Analysis', 'Book Reviews', 'Comparative Literature', 'Critical Essays', 'Thesis Writing', 'Proofreading', 'Editing'],
-      whatsapp: '+2349050035785',
+      specialties: ['Essay Writing', 'Literary Analysis', 'Creative Writing', 'Research Papers', 'Poetry Analysis', 'Book Reviews', 'Comparative Literature', 'Critical Essays', 'Thesis Writing', 'Grammar & Punctuation', 'Academic Writing', 'Dissertation Support'],
+      whatsapp: '+2349032979532',
       icon: <BookOpen className="w-5 h-5" />,
       color: 'from-blue-500/10 to-blue-600/5',
       iconColor: 'text-blue-600',
@@ -20,7 +20,7 @@ const Scribes = () => {
       name: 'THINQSCRIBE',
       field: 'Science & Research',
       specialties: ['Biology', 'Chemistry', 'Physics', 'Lab Reports', 'Biochemistry', 'Microbiology', 'Genetics', 'Organic Chemistry', 'Environmental Science', 'Anatomy', 'Physiology', 'Research Papers'],
-      whatsapp: '+2349032979532',
+      whatsapp: '+2349050035785',
       icon: <Microscope className="w-5 h-5" />,
       color: 'from-emerald-500/10 to-emerald-600/5',
       iconColor: 'text-emerald-600',
@@ -31,7 +31,7 @@ const Scribes = () => {
       name: 'THINQSCRIBE',
       field: 'Mathematics & Statistics',
       specialties: ['Calculus', 'Statistics', 'Data Analysis', 'Problem Solving', 'Algebra', 'Geometry', 'Trigonometry', 'Linear Algebra', 'Differential Equations', 'Probability', 'SPSS', 'Excel Analysis'],
-      whatsapp: '+2349050035785',
+      whatsapp: '+2348111161612',
       icon: <Calculator className="w-5 h-5" />,
       color: 'from-purple-500/10 to-purple-600/5',
       iconColor: 'text-purple-600',
@@ -41,8 +41,8 @@ const Scribes = () => {
       id: 4,
       name: 'THINQSCRIBE',
       field: 'Social Sciences',
-      specialties: ['Psychology', 'Sociology', 'Political Science', 'Anthropology', 'Social Work', 'Criminology', 'Human Geography', 'International Relations', 'Public Policy', 'Cultural Studies', 'Education'],
-      whatsapp: '+2349032979532',
+      specialties: ['Psychology', 'Sociology', 'Political Science', 'Anthropology', 'Social Work', 'Criminology', 'Human Geography', 'International Relations', 'Public Policy', 'Cultural Studies', 'Ethics', 'Philosophy'],
+      whatsapp: '+2349095368912',
       icon: <Globe className="w-5 h-5" />,
       color: 'from-orange-500/10 to-orange-600/5',
       iconColor: 'text-orange-600',
@@ -52,8 +52,8 @@ const Scribes = () => {
       id: 5,
       name: 'THINQSCRIBE',
       field: 'Arts & Design',
-      specialties: ['Art History', 'Graphic Design', 'Fine Arts', 'Creative Projects', 'Visual Arts', 'Photography', 'Film Studies', 'Architecture', 'Fashion Design', 'Interior Design', 'Digital Art'],
-      whatsapp: '+2349050035785',
+      specialties: ['Art History', 'Graphic Design', 'Fine Arts', 'Creative Projects', 'Visual Arts', 'Photography', 'Film Studies', 'Architecture', 'Fashion Design', 'Interior Design', 'Digital Art', 'Sculpture'],
+      whatsapp: '+2349032979532',
       icon: <Palette className="w-5 h-5" />,
       color: 'from-pink-500/10 to-pink-600/5',
       iconColor: 'text-pink-600',
@@ -63,8 +63,8 @@ const Scribes = () => {
       id: 6,
       name: 'THINQSCRIBE',
       field: 'Technology & Engineering',
-      specialties: ['Computer Science', 'Programming', 'Software Engineering', 'Technical Writing', 'Web Development', 'Database Design', 'Algorithms', 'Data Structures', 'Networking', 'Cybersecurity'],
-      whatsapp: '+2349032979532',
+      specialties: ['Computer Science', 'Programming', 'Software Engineering', 'Technical Writing', 'Web Development', 'Database Design', 'Algorithms', 'Data Structures', 'Networking', 'Cybersecurity', 'AI & Machine Learning', 'Cloud Computing'],
+      whatsapp: '+2349050035785',
       icon: <Code className="w-5 h-5" />,
       color: 'from-indigo-500/10 to-indigo-600/5',
       iconColor: 'text-indigo-600',
@@ -74,8 +74,8 @@ const Scribes = () => {
       id: 7,
       name: 'THINQSCRIBE',
       field: 'Business & Economics',
-      specialties: ['Business Analysis', 'Economics', 'Finance', 'Marketing', 'Accounting', 'Management', 'Entrepreneurship', 'Strategic Planning', 'Business Plans', 'Financial Analysis', 'Market Research'],
-      whatsapp: '+2349050035785',
+      specialties: ['Business Analysis', 'Economics', 'Finance', 'Marketing', 'Accounting', 'Management', 'Entrepreneurship', 'Strategic Planning', 'Business Plans', 'Financial Analysis', 'Market Research', 'MBA Assignments'],
+      whatsapp: '+2348111161612',
       icon: <GraduationCap className="w-5 h-5" />,
       color: 'from-teal-500/10 to-teal-600/5',
       iconColor: 'text-teal-600',
@@ -85,8 +85,8 @@ const Scribes = () => {
       id: 8,
       name: 'THINQSCRIBE',
       field: 'Music & Performing Arts',
-      specialties: ['Music Theory', 'Composition', 'Performance Analysis', 'Music History', 'Theatre Studies', 'Dance', 'Opera', 'Jazz Studies', 'Ethnomusicology', 'Sound Design', 'Music Education'],
-      whatsapp: '+2349032979532',
+      specialties: ['Music Theory', 'Composition', 'Performance Analysis', 'Music History', 'Theatre Studies', 'Dance', 'Opera', 'Jazz Studies', 'Ethnomusicology', 'Sound Design', 'Music Education', 'Audio Production'],
+      whatsapp: '+2349095368912',
       icon: <Music className="w-5 h-5" />,
       color: 'from-rose-500/10 to-rose-600/5',
       iconColor: 'text-rose-600',
@@ -233,7 +233,7 @@ const Scribes = () => {
                             href={`https://wa.me/${scribe.whatsapp.replace(/\s+/g, '')}?text=Hi ThinqScribe, I found your profile on ThinqScribe and would like to discuss my academic writing needs.`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/btn w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl font-medium inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
+                            className="group/btn w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl font-medium inline-flex items-center justify-center gap-2 transition-all duration-200"
                           >
                             <MessageCircle className="w-4 h-4 transition-transform group-hover/btn:rotate-12" />
                             <span className="text-sm">Chat on WhatsApp</span>
@@ -270,10 +270,10 @@ const Scribes = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4">
               <a
-                href="https://wa.me/+2349050035785?text=Hi ThinqScribe, I found your profile on ThinqScribe and would like to discuss my academic writing needs."
+                href="https://wa.me/+2349032979532?text=Hi ThinqScribe, I found your profile on ThinqScribe and would like to discuss my academic writing needs."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white font-medium py-3.5 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                className="group w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white font-medium py-3.5 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5 transition-transform group-hover:rotate-12" />
                 <span>Get Started Now</span>
@@ -281,7 +281,7 @@ const Scribes = () => {
               <a
                 href="#"
                 onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-medium py-3.5 px-8 rounded-xl transition-all duration-300 border border-gray-100 hover:border-gray-200 hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-medium py-3.5 px-8 rounded-xl transition-all duration-300 border border-gray-100 hover:border-gray-200 hover:shadow-md"
               >
                 Browse All Scribes
               </a>
