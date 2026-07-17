@@ -20,6 +20,10 @@ const Login = () => {
     if (result.success) navigate('/writers');
   };
 
+  // Standardized blue color from landing page
+  const primaryColor = '#1e3a8a';
+  const primaryHoverColor = '#1e40af';
+
   return (
     <div
       style={{
@@ -48,19 +52,19 @@ const Login = () => {
           backdropFilter: 'blur(10px)',
           borderRadius: '12px',
           textDecoration: 'none',
-          color: '#015382',
+          color: primaryColor,
           fontSize: '13px',
           fontWeight: '600',
-          boxShadow: '0 4px 20px rgba(1,83,130,0.15)',
+          boxShadow: `0 4px 20px ${primaryColor}26`,
           transition: 'all 0.2s ease',
         }}
         onMouseEnter={(e) => {
-          e.target.style.background = '#015382';
+          e.target.style.background = primaryColor;
           e.target.style.color = 'white';
         }}
         onMouseLeave={(e) => {
           e.target.style.background = 'rgba(255,255,255,0.95)';
-          e.target.style.color = '#015382';
+          e.target.style.color = primaryColor;
         }}
       >
         <Home size={16} />
@@ -80,7 +84,7 @@ const Login = () => {
           background: '#f5f6f0',
           borderRadius: window.innerWidth <= 768 ? '20px' : '28px',
           overflow: 'hidden',
-          boxShadow: '0 24px 80px rgba(1,83,130,0.13)',
+          boxShadow: `0 24px 80px ${primaryColor}21`,
           position: 'relative',
         }}
       >
@@ -109,7 +113,7 @@ const Login = () => {
                 borderRadius: '10px'
               }}
             />
-            <span style={{ fontFamily: "'Berkshire Swash', cursive", fontSize: '19px', color: '#015382', letterSpacing: '0px' }}>
+            <span style={{ fontFamily: "'Berkshire Swash', cursive", fontSize: '19px', color: primaryColor, letterSpacing: '0px' }}>
               Thinqscribe
             </span>
           </div>
@@ -158,7 +162,7 @@ const Login = () => {
                     boxSizing: 'border-box',
                     transition: 'border-color 0.2s',
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
               </div>
@@ -189,7 +193,7 @@ const Login = () => {
                     boxSizing: 'border-box',
                     transition: 'border-color 0.2s',
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
                 <button
@@ -201,7 +205,7 @@ const Login = () => {
                 </button>
               </div>
               <div style={{ textAlign: 'right', marginTop: '6px' }}>
-                <Link to="/forgot-password" style={{ fontSize: '12px', color: '#015382', textDecoration: 'none', fontWeight: '500' }}>
+                <Link to="/forgot-password" style={{ fontSize: '12px', color: primaryColor, textDecoration: 'none', fontWeight: '500' }}>
                   Forgot password?
                 </Link>
               </div>
@@ -214,7 +218,7 @@ const Login = () => {
               style={{
                 width: '100%',
                 padding: '13px',
-                background: loading ? '#5a9fc0' : '#015382',
+                background: loading ? '#5a9fc0' : primaryColor,
                 color: 'white',
                 border: 'none',
                 borderRadius: '12px',
@@ -228,8 +232,8 @@ const Login = () => {
                 letterSpacing: '0.1px',
                 transition: 'background 0.2s, transform 0.1s',
               }}
-              onMouseEnter={(e) => { if (!loading) e.target.style.background = '#013f62'; }}
-              onMouseLeave={(e) => { if (!loading) e.target.style.background = '#015382'; }}
+              onMouseEnter={(e) => { if (!loading) e.target.style.background = primaryHoverColor; }}
+              onMouseLeave={(e) => { if (!loading) e.target.style.background = primaryColor; }}
             >
               {loading ? (
                 <div style={{ width: '18px', height: '18px', border: '2px solid white', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
@@ -250,7 +254,7 @@ const Login = () => {
           }}>
             <p style={{ fontSize: '12.5px', color: '#6b7a90', margin: 0 }}>
               No account?{' '}
-              <Link to="/signup" style={{ color: '#015382', fontWeight: '600', textDecoration: 'none' }}>
+              <Link to="/signup" style={{ color: primaryColor, fontWeight: '600', textDecoration: 'none' }}>
                 Sign up
               </Link>
             </p>
@@ -276,7 +280,7 @@ const Login = () => {
               position: 'absolute',
               inset: 0,
               backgroundImage:
-                'linear-gradient(135deg, rgba(1,83,130,0.72) 0%, rgba(1,40,80,0.55) 100%), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&auto=format&fit=crop)',
+                `linear-gradient(135deg, ${primaryColor}b8 0%, rgba(30,64,175,0.55) 100%), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&auto=format&fit=crop)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -302,7 +306,7 @@ const Login = () => {
               minWidth: window.innerWidth <= 768 ? '160px' : '180px',
             }}
           >
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#015382', flexShrink: 0 }} />
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: primaryColor, flexShrink: 0 }} />
             <div>
               <p style={{ fontSize: '12px', fontWeight: '700', color: '#0a1628', margin: 0 }}>100+ Expert Writers</p>
               <p style={{ fontSize: '11px', color: '#6b7a90', margin: 0 }}>Available now</p>
@@ -332,7 +336,7 @@ const Login = () => {
                 <p style={{ fontSize: '11.5px', color: '#6b7a90', margin: 0 }}>Secure & confidential · 24/7 support</p>
               </div>
               <div style={{ display: 'flex' }}>
-                {['#015382', '#e8a020', '#34a853'].map((c, i) => (
+                {[primaryColor, '#e8a020', '#34a853'].map((c, i) => (
                   <div key={i} style={{ width: '26px', height: '26px', borderRadius: '50%', background: c, border: '2px solid white', marginLeft: i > 0 ? '-8px' : '0' }} />
                 ))}
               </div>
