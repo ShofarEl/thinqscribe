@@ -6,10 +6,10 @@ const Writers = () => {
   const writers = [
     {
       id: 1,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Literature & English',
       specialties: ['Essay Writing', 'Literary Analysis', 'Creative Writing', 'Research Papers', 'Poetry Analysis', 'Book Reviews', 'Comparative Literature', 'Critical Essays', 'Thesis Writing', 'Dissertations', 'Annotated Bibliography', 'Rhetorical Analysis'],
-      whatsapp: '+2349032979532',
+      whatsapp: '+2349050035785',
       icon: <BookOpen className="w-5 h-5" />,
       color: 'from-blue-500/10 to-blue-600/5',
       iconColor: 'text-blue-600',
@@ -17,7 +17,7 @@ const Writers = () => {
     },
     {
       id: 2,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Science & Research',
       specialties: ['Biology', 'Chemistry', 'Physics', 'Lab Reports', 'Biochemistry', 'Microbiology', 'Genetics', 'Organic Chemistry', 'Environmental Science', 'Anatomy', 'Physiology', 'Research Proposals', 'Scientific Papers'],
       whatsapp: '+2349050035785',
@@ -28,10 +28,10 @@ const Writers = () => {
     },
     {
       id: 3,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Mathematics & Statistics',
       specialties: ['Calculus', 'Statistics', 'Data Analysis', 'Problem Solving', 'Algebra', 'Geometry', 'Trigonometry', 'Linear Algebra', 'Differential Equations', 'Probability', 'SPSS', 'Excel Analysis', 'Mathematical Modeling'],
-      whatsapp: '+2348111161612',
+      whatsapp: '+2349095368912',
       icon: <Calculator className="w-5 h-5" />,
       color: 'from-purple-500/10 to-purple-600/5',
       iconColor: 'text-purple-600',
@@ -39,7 +39,7 @@ const Writers = () => {
     },
     {
       id: 4,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Social Sciences',
       specialties: ['Psychology', 'Sociology', 'Political Science', 'Anthropology', 'Social Work', 'Criminology', 'Human Geography', 'International Relations', 'Public Policy', 'Cultural Studies', 'Gender Studies', 'Case Studies'],
       whatsapp: '+2349095368912',
@@ -50,10 +50,10 @@ const Writers = () => {
     },
     {
       id: 5,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Arts & Design',
       specialties: ['Art History', 'Graphic Design', 'Fine Arts', 'Creative Projects', 'Visual Arts', 'Photography', 'Film Studies', 'Architecture', 'Fashion Design', 'Interior Design', 'Digital Art', 'Art Criticism'],
-      whatsapp: '+2349032979532',
+      whatsapp: '+2349050035785',
       icon: <Palette className="w-5 h-5" />,
       color: 'from-pink-500/10 to-pink-600/5',
       iconColor: 'text-pink-600',
@@ -61,7 +61,7 @@ const Writers = () => {
     },
     {
       id: 6,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Technology & Engineering',
       specialties: ['Computer Science', 'Programming', 'Software Engineering', 'Technical Writing', 'Web Development', 'Database Design', 'Algorithms', 'Data Structures', 'Networking', 'Cybersecurity', 'AI & Machine Learning', 'Mobile Apps'],
       whatsapp: '+2349050035785',
@@ -72,10 +72,10 @@ const Writers = () => {
     },
     {
       id: 7,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Business & Economics',
       specialties: ['Business Analysis', 'Economics', 'Finance', 'Marketing', 'Accounting', 'Management', 'Entrepreneurship', 'Strategic Planning', 'Business Plans', 'Financial Analysis', 'Market Research', 'MBA Essays'],
-      whatsapp: '+2348111161612',
+      whatsapp: '+2349095368912',
       icon: <GraduationCap className="w-5 h-5" />,
       color: 'from-teal-500/10 to-teal-600/5',
       iconColor: 'text-teal-600',
@@ -83,7 +83,7 @@ const Writers = () => {
     },
     {
       id: 8,
-      name: 'THINQSCRIBE',
+      name: 'THE SCRIBE',
       field: 'Music & Performing Arts',
       specialties: ['Music Theory', 'Composition', 'Performance Analysis', 'Music History', 'Theatre Studies', 'Dance', 'Opera', 'Jazz Studies', 'Ethnomusicology', 'Sound Design', 'Music Education', 'Concert Reviews'],
       whatsapp: '+2349095368912',
@@ -190,8 +190,8 @@ const Writers = () => {
                       <div className="relative">
                         <div className={`w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl ${writer.accentColor} flex items-center justify-center p-2.5 sm:p-3 transition-transform duration-300 group-hover:scale-105`}>
                           <img
-                            src="/logo1.png"
-                            alt="Thinqscribe Logo"
+                            src="/the_scribelogo.png"
+                            alt="The Scribe Logo"
                             className="w-full h-full object-contain"
                           />
                         </div>
@@ -230,7 +230,7 @@ const Writers = () => {
                         {/* WhatsApp Button */}
                         <div className="flex-shrink-0">
                           <a
-                            href={`https://wa.me/${writer.whatsapp.replace(/\s+/g, '')}?text=Hi ThinqScribe, I found your profile on ThinqScribe and would like to discuss my academic writing needs.`}
+                            href={`https://wa.me/${writer.whatsapp.replace(/\s+/g, '')}?text=Hello Scribe!, I found your profile on The Scribe and would like to discuss my academic writing needs.`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group/btn w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl font-medium inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95"
@@ -270,7 +270,7 @@ const Writers = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4">
               <a
-                href="https://wa.me/+2349032979532?text=Hi ThinqScribe, I found your profile on ThinqScribe and would like to discuss my academic writing needs."
+                href="https://wa.me/+2349050035785?text=Hello Scribe!!!!! I found your profile on The Scribe and would like to discuss my academic writing needs."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white font-medium py-3.5 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2.5 hover:scale-105 active:scale-95"

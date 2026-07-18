@@ -118,7 +118,7 @@ const LandingPage = () => {
           <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div className="text-center md:text-left">
-                <h3 className="text-xl md:text-2xl font-display text-gray-900 mb-2">Thinqscribe</h3>
+                <h3 className="text-xl md:text-2xl font-display text-gray-900 mb-2">The Scribe</h3>
                 <p className="text-gray-500 text-sm">Join over 5,000+ students around the world</p>
               </div>
               <div className="flex items-center justify-center md:justify-end">
@@ -159,7 +159,7 @@ const LandingPage = () => {
             viewport={{ once: true }}
             className="md:hidden bg-gray-50 rounded-2xl p-6 mb-12 text-center"
           >
-            <h3 className="text-lg font-display text-gray-900 mb-2">Thinqscribe</h3>
+            <h3 className="text-lg font-display text-gray-900 mb-2">The Scribe</h3>
             <p className="text-gray-500 text-sm mb-4">Join over 5,000+ students around the world</p>
             <div className="flex items-center justify-center gap-1 mb-2">
               {[...Array(4)].map((_, i) => (
@@ -245,7 +245,7 @@ const LandingPage = () => {
                 Benefit From Our Online Learning Expertise Earn professional
               </h2>
               <p className="text-gray-600 mb-8 md:mb-10 leading-relaxed text-base md:text-lg px-2 lg:px-0">
-                At Thinqscribe, we believe every student deserves access to expert academic writing support. 
+                At The Scribe, we believe every student deserves access to expert academic writing support. 
                 Our mission is to connect students with verified, qualified writers who can help them achieve their academic goals.
               </p>
               
@@ -313,7 +313,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-white font-display text-lg mb-4">Thinqscribe</h3>
+              <h3 className="text-white font-display text-lg mb-4">The Scribe</h3>
               <p className="text-sm">Empowering students worldwide to achieve academic excellence.</p>
             </div>
             <div>
@@ -336,12 +336,13 @@ const LandingPage = () => {
               <h4 className="text-white font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm">
                 <li>officialthinqscribe@gmail.com</li>
-                <li>+234 903 297 9532</li>
+                <li>+2349050035785</li>
+                <li>+2349095368912</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2026 Thinqscribe. All rights reserved.</p>
+            <p>&copy; 2026 The Scribe. All rights reserved.</p>
           </div>
         </div>
       </footer>

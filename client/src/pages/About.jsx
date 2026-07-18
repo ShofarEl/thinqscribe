@@ -50,7 +50,7 @@ const About = () => {
                 transition={{ delay: 0.3 }}
                 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight px-2 lg:px-0"
               >
-                About Thinqscribe
+                About The Scribe
               </motion.h1>
 
               <motion.p
@@ -109,7 +109,7 @@ const About = () => {
             >
               <h2 className="text-2xl md:text-3xl font-display text-primary mb-6">Our Mission</h2>
               <p className="text-gray-600 mb-4 text-base md:text-lg leading-relaxed">
-                At Thinqscribe, we believe every student deserves access to expert academic writing support. 
+                At The Scribe, we believe every student deserves access to expert academic writing support. 
                 Our mission is to connect students with verified, qualified writers who can help them achieve their academic goals.
               </p>
               <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
@@ -246,7 +246,7 @@ const About = () => {
               Ready to Start Your Academic Journey?
             </h2>
             <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-2">
-              Join thousands of students who have transformed their academic writing with Thinqscribe
+              Join thousands of students who have transformed their academic writing with The Scribe
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
               <Link to="/signup" className="bg-coral hover:bg-[#e55a2a] text-white font-semibold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-200 shadow-lg text-sm md:text-base">

@@ -21,16 +21,16 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/logo1.png" 
-              alt="Thinqscribe" 
-              className="h-8 w-8"
+              src="/the_scribelogo.png" 
+              alt="The Scribe" 
+              className="h-8 w-8 object-contain flex-shrink-0"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'block';
               }}
             />
-            <span className="text-xl font-bold text-primary hidden">Thinqscribe</span>
-            <span className="text-xl font-display text-primary">Thinqscribe</span>
+            <span className="text-xl font-bold text-primary hidden">The Scribe</span>
+            <span className="text-xl font-display text-primary whitespace-nowrap">The Scribe</span>
           </Link>
 
           {/* Desktop Menu */}

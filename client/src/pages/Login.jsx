@@ -105,16 +105,18 @@ const Login = () => {
           {/* Logo */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '40px' }}>
             <img 
-              src="/logo1.png" 
-              alt="Thinqscribe Logo" 
+              src="/the_scribelogo.png" 
+              alt="The Scribe Logo" 
               style={{
                 width: '36px',
                 height: '36px',
-                borderRadius: '10px'
+                borderRadius: '10px',
+                objectFit: 'contain',
+                flexShrink: 0
               }}
             />
             <span style={{ fontFamily: "'Berkshire Swash', cursive", fontSize: '19px', color: primaryColor, letterSpacing: '0px' }}>
-              Thinqscribe
+              The Scribe
             </span>
           </div>
 

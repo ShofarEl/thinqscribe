@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock, Eye, EyeOff, User, CheckCircle, BookOpen, Home } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, User, CheckCircle, Home } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Signup = () => {
@@ -12,6 +12,10 @@ const Signup = () => {
   const [errors, setErrors] = useState({});
   const { signup } = useAuth();
   const navigate = useNavigate();
+
+  // Same colors as Login and the rest of the app
+  const primaryColor = '#1e3a8a';
+  const primaryHoverColor = '#1e40af';
 
   const getPasswordStrength = (password) => {
     let s = 0;
@@ -82,7 +86,7 @@ const Signup = () => {
         justifyContent: 'center',
         background: '#e8eaf0',
         padding: '16px',
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Instrument Sans', 'DM Sans', sans-serif",
       }}
     >
       {/* Back to Home Button */}
@@ -101,24 +105,25 @@ const Signup = () => {
           backdropFilter: 'blur(10px)',
           borderRadius: '12px',
           textDecoration: 'none',
-          color: '#015382',
+          color: primaryColor,
           fontSize: '13px',
           fontWeight: '600',
-          boxShadow: '0 4px 20px rgba(1,83,130,0.15)',
+          boxShadow: `0 4px 20px ${primaryColor}26`,
           transition: 'all 0.2s ease',
         }}
         onMouseEnter={(e) => {
-          e.target.style.background = '#015382';
+          e.target.style.background = primaryColor;
           e.target.style.color = 'white';
         }}
         onMouseLeave={(e) => {
           e.target.style.background = 'rgba(255,255,255,0.95)';
-          e.target.style.color = '#015382';
+          e.target.style.color = primaryColor;
         }}
       >
         <Home size={16} />
         <span style={{ display: window.innerWidth > 640 ? 'inline' : 'none' }}>Back to Home</span>
       </Link>
+
       {/* Card */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -133,7 +138,7 @@ const Signup = () => {
           background: '#f5f6f0',
           borderRadius: window.innerWidth <= 768 ? '20px' : '28px',
           overflow: 'hidden',
-          boxShadow: '0 24px 80px rgba(1,83,130,0.13)',
+          boxShadow: `0 24px 80px ${primaryColor}21`,
         }}
       >
         {/* LEFT — Form */}
@@ -145,21 +150,18 @@ const Signup = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             background: 'linear-gradient(160deg, #f0f4f8 0%, #e8f0f7 100%)',
-            minHeight: window.innerWidth <= 768 ? 'auto' : 'auto',
           }}
         >
           {/* Logo */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '32px' }}>
-            <img 
-              src="/logo1.png" 
-              alt="Thinqscribe Logo" 
-              style={{
-                width: '34px',
-                height: '34px',
-                borderRadius: '10px'
-              }}
+            <img
+              src="/the_scribelogo.png"
+              alt="The Scribe Logo"
+              style={{ width: '34px', height: '34px', borderRadius: '10px', objectFit: 'contain', flexShrink: 0 }}
             />
-            <span style={{ fontFamily: "'Berkshire Swash', cursive", fontSize: '18px', color: '#015382', letterSpacing: '0px' }}>Thinqscribe</span>
+            <span style={{ fontFamily: "'Berkshire Swash', cursive", fontSize: '18px', color: primaryColor, letterSpacing: '0px' }}>
+              The Scribe
+            </span>
           </div>
 
           {/* Heading */}
@@ -179,7 +181,7 @@ const Signup = () => {
                 <input
                   type="text" name="name" value={formData.name} onChange={handleChange}
                   placeholder="Amélie Laurent" required style={inputStyle}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
               </div>
@@ -194,7 +196,7 @@ const Signup = () => {
                 <input
                   type="email" name="email" value={formData.email} onChange={handleChange}
                   placeholder="your@email.com" required style={inputStyle}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
               </div>
@@ -209,7 +211,7 @@ const Signup = () => {
                 <input
                   type={showPassword ? 'text' : 'password'} name="password" value={formData.password} onChange={handleChange}
                   placeholder="••••••••••••" required style={{ ...inputStyle, paddingRight: '38px' }}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
                 <button type="button" onClick={() => setShowPassword(!showPassword)}
@@ -238,7 +240,7 @@ const Signup = () => {
                 <input
                   type={showConfirmPassword ? 'text' : 'password'} name="confirmPassword" value={formData.confirmPassword} onChange={handleChange}
                   placeholder="••••••••••••" required style={{ ...inputStyle, paddingRight: '38px' }}
-                  onFocus={(e) => (e.target.style.borderColor = '#015382')}
+                  onFocus={(e) => (e.target.style.borderColor = primaryColor)}
                   onBlur={(e) => (e.target.style.borderColor = '#dde3ec')}
                 />
                 <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -259,14 +261,14 @@ const Signup = () => {
               type="submit" disabled={loading}
               style={{
                 width: '100%', padding: '13px',
-                background: loading ? '#5a9fc0' : '#015382',
+                background: loading ? '#5a9fc0' : primaryColor,
                 color: 'white', border: 'none', borderRadius: '12px',
                 fontSize: '13.5px', fontWeight: '600', cursor: loading ? 'not-allowed' : 'pointer',
                 marginTop: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'background 0.2s',
+                letterSpacing: '0.1px', transition: 'background 0.2s',
               }}
-              onMouseEnter={(e) => { if (!loading) e.target.style.background = '#013f62'; }}
-              onMouseLeave={(e) => { if (!loading) e.target.style.background = '#015382'; }}
+              onMouseEnter={(e) => { if (!loading) e.target.style.background = primaryHoverColor; }}
+              onMouseLeave={(e) => { if (!loading) e.target.style.background = primaryColor; }}
             >
               {loading
                 ? <div style={{ width: '16px', height: '16px', border: '2px solid white', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
@@ -275,17 +277,17 @@ const Signup = () => {
           </form>
 
           {/* Footer */}
-          <div style={{ 
-            marginTop: '20px', 
-            display: 'flex', 
+          <div style={{
+            marginTop: '20px',
+            display: 'flex',
             flexDirection: window.innerWidth <= 640 ? 'column' : 'row',
-            justifyContent: 'space-between', 
+            justifyContent: 'space-between',
             alignItems: window.innerWidth <= 640 ? 'flex-start' : 'center',
             gap: window.innerWidth <= 640 ? '12px' : '0'
           }}>
             <p style={{ fontSize: '12px', color: '#6b7a90', margin: 0 }}>
               Have an account?{' '}
-              <Link to="/login" style={{ color: '#015382', fontWeight: '600', textDecoration: 'none' }}>Sign in</Link>
+              <Link to="/login" style={{ color: primaryColor, fontWeight: '600', textDecoration: 'none' }}>Sign in</Link>
             </p>
             <Link to="/" style={{ fontSize: '11.5px', color: '#9daab8', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
               Terms & Conditions
@@ -294,10 +296,10 @@ const Signup = () => {
         </div>
 
         {/* RIGHT — Image Panel */}
-        <div style={{ 
-          flex: 1, 
-          position: 'relative', 
-          overflow: 'hidden', 
+        <div style={{
+          flex: 1,
+          position: 'relative',
+          overflow: 'hidden',
           borderRadius: window.innerWidth <= 768 ? '0' : '0 28px 28px 0',
           minHeight: window.innerWidth <= 768 ? '200px' : 'auto',
           display: window.innerWidth <= 480 ? 'none' : 'block',
@@ -305,7 +307,7 @@ const Signup = () => {
           <div
             style={{
               position: 'absolute', inset: 0,
-              backgroundImage: 'linear-gradient(135deg, rgba(1,83,130,0.72) 0%, rgba(1,40,80,0.55) 100%), url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop)',
+              backgroundImage: `linear-gradient(135deg, ${primaryColor}b8 0%, rgba(30,64,175,0.55) 100%), url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop)`,
               backgroundSize: 'cover', backgroundPosition: 'center',
             }}
           />
@@ -316,18 +318,25 @@ const Signup = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
             style={{
-              position: 'absolute', 
-              top: window.innerWidth <= 768 ? '16px' : '24px', 
-              left: window.innerWidth <= 768 ? '16px' : '20px',
-              background: 'rgba(255,255,255,0.93)', 
+              position: 'absolute',
+              top: window.innerWidth <= 768 ? '16px' : '24px',
+              left: window.innerWidth <= 768 ? '16px' : '24px',
+              background: 'rgba(255,255,255,0.92)',
               backdropFilter: 'blur(10px)',
-              borderRadius: '14px', 
+              borderRadius: '14px',
               padding: window.innerWidth <= 768 ? '10px 14px' : '12px 16px',
               boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              minWidth: window.innerWidth <= 768 ? '160px' : '180px',
             }}
           >
-            <p style={{ fontSize: '11.5px', fontWeight: '700', color: '#0a1628', margin: '0 0 1px' }}>Free Account Setup</p>
-            <p style={{ fontSize: '11px', color: '#6b7a90', margin: 0 }}>Instant writer matching</p>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: primaryColor, flexShrink: 0 }} />
+            <div>
+              <p style={{ fontSize: '12px', fontWeight: '700', color: '#0a1628', margin: 0 }}>Free Account Setup</p>
+              <p style={{ fontSize: '11px', color: '#6b7a90', margin: 0 }}>Instant writer matching</p>
+            </div>
           </motion.div>
 
           {/* Floating bottom card */}
@@ -336,28 +345,27 @@ const Signup = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
             style={{
-              position: 'absolute', 
-              bottom: window.innerWidth <= 768 ? '16px' : '28px', 
-              left: window.innerWidth <= 768 ? '16px' : '20px', 
-              right: window.innerWidth <= 768 ? '16px' : '20px',
-              background: 'rgba(255,255,255,0.93)', 
+              position: 'absolute',
+              bottom: window.innerWidth <= 768 ? '16px' : '28px',
+              left: window.innerWidth <= 768 ? '16px' : '24px',
+              right: window.innerWidth <= 768 ? '16px' : '24px',
+              background: 'rgba(255,255,255,0.92)',
               backdropFilter: 'blur(10px)',
-              borderRadius: '14px', 
+              borderRadius: '14px',
               padding: window.innerWidth <= 768 ? '12px 16px' : '14px 18px',
               boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'space-between',
             }}
           >
-            <div>
-              <p style={{ fontSize: '12.5px', fontWeight: '700', color: '#0a1628', margin: '0 0 2px' }}>Quality Guaranteed</p>
-              <p style={{ fontSize: '11px', color: '#6b7a90', margin: 0 }}>Secure & confidential · 24/7</p>
-            </div>
-            <div style={{ display: 'flex' }}>
-              {['#015382', '#e8a020', '#34a853', '#ef4444'].map((c, i) => (
-                <div key={i} style={{ width: '24px', height: '24px', borderRadius: '50%', background: c, border: '2px solid white', marginLeft: i > 0 ? '-7px' : '0' }} />
-              ))}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <p style={{ fontSize: '12.5px', fontWeight: '700', color: '#0a1628', margin: '0 0 2px' }}>Quality Guaranteed</p>
+                <p style={{ fontSize: '11.5px', color: '#6b7a90', margin: 0 }}>Secure & confidential · 24/7 support</p>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {[primaryColor, '#e8a020', '#34a853'].map((c, i) => (
+                  <div key={i} style={{ width: '26px', height: '26px', borderRadius: '50%', background: c, border: '2px solid white', marginLeft: i > 0 ? '-8px' : '0' }} />
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>

@@ -4,19 +4,21 @@
  */
 
 // Meta/Facebook Pixel ID
-export const FACEBOOK_PIXEL_ID = process.env.VITE_FACEBOOK_PIXEL_ID || '';
+export const FACEBOOK_PIXEL_ID = import.meta.env.VITE_FACEBOOK_PIXEL_ID || '';
 
 // Google Analytics ID
-export const GOOGLE_ANALYTICS_ID = process.env.VITE_GOOGLE_ANALYTICS_ID || '';
+export const GOOGLE_ANALYTICS_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID || '';
 
 // TikTok Pixel ID
-export const TIKTOK_PIXEL_ID = process.env.VITE_TIKTOK_PIXEL_ID || '';
+export const TIKTOK_PIXEL_ID = import.meta.env.VITE_TIKTOK_PIXEL_ID || '';
 
 // LinkedIn Tag ID
-export const LINKEDIN_TAG_ID = process.env.VITE_LINKEDIN_TAG_ID || '';
+export const LINKEDIN_TAG_ID = import.meta.env.VITE_LINKEDIN_TAG_ID || '';
 
 /**
  * Initialize Facebook/Meta Pixel
+ * Note: The pixel base code is already injected via index.html.
+ * This function handles re-init and page-view tracking for SPA route changes.
  */
 export const initFacebookPixel = () => {
   if (!FACEBOOK_PIXEL_ID) {
@@ -24,24 +26,13 @@ export const initFacebookPixel = () => {
     return;
   }
 
-  // Load Facebook SDK
-  window.fbq = window.fbq || function() {
-    (window.fbq.q = window.fbq.q || []).push(arguments);
-  };
+  if (!window.fbq) {
+    console.warn('Facebook Pixel SDK not loaded');
+    return;
+  }
 
   window.fbq('init', FACEBOOK_PIXEL_ID);
   window.fbq('track', 'PageView');
-
-  // Load Facebook SDK script
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-  document.head.appendChild(script);
-
-  // Noscript fallback
-  const noscript = document.createElement('noscript');
-  noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1" />`;
-  document.body.appendChild(noscript);
 };
 
 /**
